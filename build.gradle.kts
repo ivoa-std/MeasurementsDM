@@ -1,6 +1,6 @@
 
 plugins {
-    id("net.ivoa.vo-dml.vodmltools") version "0.3.14"
+    id("net.ivoa.vo-dml.vodmltools") version "0.5.10"
     `maven-publish`
 }
 
@@ -15,7 +15,7 @@ vodml {
 }
 
 dependencies {
-    api("org.javastro.ivoa.dm:coordinateDM:1.0-SNAPSHOT") //reusing the "standard" base library
+    api("org.javastro.ivoa.dm:coordinateDM:1.1.1-SNAPSHOT") //reusing the "standard" base library
     // Use JUnit Jupiter for testing - only necessary if you want to write unit tests!
     implementation("org.slf4j:slf4j-api:1.7.32")
     testRuntimeOnly("ch.qos.logback:logback-classic:1.2.3")
