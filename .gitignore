@@ -26,3 +26,7 @@ __TEMP__.vo-dml.xml
 
 # Misc
 *.swp
+/.idea/
+/.gradle/
+/build/
+/bin/

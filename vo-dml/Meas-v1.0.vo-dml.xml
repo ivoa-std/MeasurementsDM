@@ -17,12 +17,12 @@ We include a fairly simple Error model, describing errors as a 'shape' of uncert
   <lastModified>2021-10-19T11:33:46</lastModified>
   <import>
     <name>ivoa</name>
-    <url>https://www.ivoa.net/xml/VODML/IVOA-v1.vo-dml.xml</url>
+    <url>IVOA-v1.0.vo-dml.xml</url>
     <documentationURL>https://www.ivoa.net/documents/VODML/20180910/IVOA-REC-v1.0.html</documentationURL>
   </import>
   <import>
     <name>coords</name>
-    <url>https://www.ivoa.net/xml/VODML/Coords-v1.vo-dml.xml</url>
+    <url>Coords-v1.0.vo-dml.xml</url>
     <documentationURL>https://www.ivoa.net/documents/Coords/index.html</documentationURL>
   </import>
   <dataType abstract="true">
