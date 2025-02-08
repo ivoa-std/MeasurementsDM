@@ -22,41 +22,55 @@ This toolkit provides a set of tasks for generating and translating vo-dml/XML f
 For details on the toolkit, please see the "[Using the VO-DML Gradle Plugin](https://github.com/ivoa/vo-dml/tree/master/tools)"
 page of the [VO-DML repository](https://github.com/ivoa/vo-dml).
 
-## Setup
+## Get Started
 
-* Clone this repository
-    This is a command-line system
-    
-    > git clone --recurse-submodules https://github.com/ivoa-std/MeasurementDM.git
-    
-* Environment
-    
-    The toolkit has 3 dependencies
-    * gradle version 8
-    * JDK 17
-    * graphviz
-    
-    toolkit_environment.yml: This file can be used to create a conda environment with the appropriate packages (requires conda).
-    > conda env create --file=toolkit_environment.yml
-    > conda activate vodml-tk
-    
-    JAVA_HOME: I found that setting this helped find the conda installed java over the system install.
-    > setenv JAVA_HOME $CONDA_PREFIX/lib/jvm
- 
-* Toolkit Resource files
-    Pulling from [VO-DML Tools Guide](https://ivoa.github.io/vo-dml/QuickStart/), with particulars for this model.
+Clone this repository
+This is a command-line system
 
-    * build.gradle.kts
+`git clone --recurse-submodules https://github.com/ivoa-std/MeasurementDM.git`
+    
+## Setup Environment
+
+### Dependencies
+
+The toolkit has 3 dependencies
+* gradle version 8
+* JDK 17
+* graphviz
+
+The following are meant to aid in getting an appropriate environment established
+
+* **toolkit_environment.yml**: 
+
+    This file can be used to create a conda environment with the appropriate packages (requires conda).
+
+    `conda env create --file=toolkit_environment.yml`
+    `conda activate vodml-tk`
+
+* **JAVA_HOME**: 
+
+    I found that setting this helped find the conda installed java over the system install.
+    
+    `setenv JAVA_HOME $CONDA_PREFIX/lib/jvm`
+
+### Toolkit Resource files
+
+Pulling from [VO-DML Tools Guide](https://ivoa.github.io/vo-dml/QuickStart/), with particulars for this model.
+
+* **build.gradle.kts**
+
     The gradle bridge to the vo-dml toolkit, allows users to customize the configuration and register additional tasks.
-        * vodmlDir: set to location of the vo-dml/xml file:  vodmlDir.set(file("../vo-dml"))
-        * vodslDir: set to location of the vo-dml/dsl file:  vodslDir.set(file("../model"))
-        * bindingFiles: set to location of binding file(s)
+    * vodmlDir: set to location of the vo-dml/xml file:  vodmlDir.set(file("../vo-dml"))
+    * vodslDir: set to location of the vo-dml/dsl file:  vodslDir.set(file("../model"))
+    * bindingFiles: set to location of binding file(s)
 
-    * settings.gradle.kts
+* **settings.gradle.kts**
+
     gradle support
-        * set rootProject.name
+    * set rootProject.name
 
-    * meas.vo-dml.binding.xml
+* **meas.vo-dml.binding.xml**
+
     Binding file, contents map to description in the VO-DML Tools Guide (link above).
     In this repository, it is located coincident with the vo-dml/xml file it relates to (ie: in the vodmlDir).
 
@@ -81,7 +95,7 @@ various other formats or to code.  These instructions are focused on the tasks u
 VO-DML/XML files and generation of the standard HTML documentation.
 
 * ```%> gradle UMLToVODML```
-  This model is currently developed using the Modelio UML tool and exported to UML-2.4.1 format.
+  For models developed fully using a modeling tool (e.g. Modelio UML tool) and exported to UML-2.4.1 format.
   This command translates the XMI file into the VO-DML/XML representation.
 
     * input, output, and translation script are specified with the task registration in build.gradle.kts
