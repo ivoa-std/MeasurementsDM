@@ -21,6 +21,11 @@ ivoatexmeta.tex
 *.validation-report.txt
 __TEMP__.vo-dml.xml
 
+# Toolkit workspace
+./work/build
+./work/.gradle
+
+
 # OS
 .DS_Store
 

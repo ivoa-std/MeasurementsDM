@@ -1,0 +1,7 @@
+name: vodml-tk
+channels:
+  - conda-forge
+dependencies:
+  - gradle   8.*
+  - graphviz
+  - openjdk  17.*
