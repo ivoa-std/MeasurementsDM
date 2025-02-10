@@ -22,8 +22,8 @@ ivoatexmeta.tex
 __TEMP__.vo-dml.xml
 
 # Toolkit workspace
-./work/build
-./work/.gradle
+/work/build
+/work/.gradle
 
 
 # OS

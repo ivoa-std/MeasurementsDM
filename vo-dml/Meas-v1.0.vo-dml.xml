@@ -12,17 +12,19 @@ We include a fairly simple Error model, describing errors as a 'shape' of uncert
   <uri/>
   <title>Astronomical Measurements Model</title>
   <author>Arnold Rots, Mark Cresitello-Dittmar, Omar Laurino</author>
-  <version>2.0</version>
+  <version>1.0</version>
   <previousVersion>0.x</previousVersion>
   <lastModified>2021-10-19T11:33:46</lastModified>
   <import>
     <name>ivoa</name>
+    <version>1.0</version>
     <url>https://www.ivoa.net/xml/VODML/IVOA-v1.vo-dml.xml</url>
     <documentationURL>https://www.ivoa.net/documents/VODML/20180910/IVOA-REC-v1.0.html</documentationURL>
   </import>
   <import>
     <name>coords</name>
-    <url>https://www.ivoa.net/xml/VODML/Coords-v1.vo-dml.xml</url>
+    <version>1.0</version>
+    <url>https://www.ivoa.net/xml/VODML/Coords-v1.0.vo-dml.xml</url>
     <documentationURL>https://www.ivoa.net/documents/Coords/index.html</documentationURL>
   </import>
   <dataType abstract="true">

@@ -39,7 +39,6 @@ application {
     mainClass.set("Genschema")
 }
 
-# For conversion of UML Tool output to VO-DML/XML via translation script
 tasks.register("UmlToVodml", net.ivoa.vodml.gradle.plugin.XmiTask::class.java) {
     xmiScript.set("xmi2vo-dml_Modelio3.7_UML2.4.1.xsl") // the conversion script
     xmiFile.set(file("../model/coords_1.0_uml2p4p1.xmi")) //the UML XMI to convert
